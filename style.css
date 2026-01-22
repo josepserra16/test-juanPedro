@@ -1,40 +1,399 @@
+/* ============================================
+   ESTILOS PARA PROCURADOR DE LOS TRIBUNALES
+   Diseño sobrio, serio y profesional
+   ============================================ */
+
+/* Reset y Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores jurídicos y neutros */
+    --color-primary: #1a3a5f;      /* Azul oscuro profesional */
+    --color-secondary: #2d5a7a;    /* Azul medio */
+    --color-accent: #4a6b7d;       /* Gris azulado */
+    --color-text: #2c3e50;         /* Gris oscuro para texto */
+    --color-text-light: #5a6c7d;   /* Gris medio para texto secundario */
+    --color-bg: #ffffff;            /* Blanco */
+    --color-bg-light: #f8f9fa;     /* Gris muy claro */
+    --color-border: #e0e4e7;       /* Gris claro para bordes */
+    
+    /* Tipografía */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Ancho máximo del contenido */
+    --max-width: 1000px;
+}
+
+/* ============================================
+   ESTRUCTURA BASE
+   ============================================ */
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-bg-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 40px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
 }
 
-h1 {
-  color: #1f3a5f;
-  margin-bottom: 10px;
+/* ============================================
+   HEADER
+   ============================================ */
+
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    border-bottom: 4px solid var(--color-secondary);
 }
 
-h2 {
-  color: #1f3a5f;
-  margin-top: 40px;
+.header__name {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: 0.5px;
 }
 
-h3 {
-  color: #2c5d8f;
+.header__title {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: var(--spacing-xs);
+    opacity: 0.95;
 }
 
-p {
-  line-height: 1.6;
+.header__location {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    font-weight: 300;
 }
 
-img {
-  max-width: 100%;
-  margin-top: 20px;
-  border-radius: 6px;
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.main {
+    padding: var(--spacing-xl) 0;
+    min-height: calc(100vh - 300px);
+}
+
+/* ============================================
+   SECCIONES
+   ============================================ */
+
+.section {
+    background-color: var(--color-bg);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-xl);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section__title {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-border);
+    font-weight: 600;
+}
+
+.section__content {
+    color: var(--color-text);
+}
+
+.section__text {
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+    color: var(--color-text);
+}
+
+.section__image {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.section--contact {
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-secondary);
+}
+
+/* ============================================
+   SERVICIOS
+   ============================================ */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+}
+
+.service {
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-light);
+    border-left: 4px solid var(--color-secondary);
+    transition: background-color 0.2s ease;
+}
+
+.service:hover {
+    background-color: #f0f3f5;
+}
+
+.service__title {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.service__text {
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* ============================================
+   LISTAS
+   ============================================ */
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: var(--spacing-md) 0;
+}
+
+.list li {
+    padding: var(--spacing-sm) 0;
+    padding-left: var(--spacing-lg);
+    position: relative;
+    color: var(--color-text);
+}
+
+.list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* ============================================
+   ELEMENTOS DE CONFIANZA
+   ============================================ */
+
+.trust-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+}
+
+.trust-item {
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-light);
+    border-top: 3px solid var(--color-primary);
+}
+
+.trust-item__title {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.trust-item__text {
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* ============================================
+   CONTACTO
+   ============================================ */
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.contact__item {
+    padding: var(--spacing-md);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+}
+
+.contact__label {
+    display: block;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.contact__text {
+    color: var(--color-text);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ============================================
+   IMÁGENES
+   ============================================ */
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+
+.footer__text {
+    margin-bottom: var(--spacing-xs);
+    opacity: 0.9;
+}
+
+.footer__text--small {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   DISEÑO RESPONSIVE
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    :root {
+        --spacing-xl: 2rem;
+        --spacing-lg: 1.5rem;
+    }
+    
+    .header__name {
+        font-size: 2rem;
+    }
+    
+    .header__title {
+        font-size: 1.1rem;
+    }
+    
+    .header__location {
+        font-size: 1rem;
+    }
+    
+    .section {
+        padding: var(--spacing-lg);
+    }
+    
+    .section__title {
+        font-size: 1.6rem;
+    }
+    
+    .services,
+    .trust-items,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .header {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .header__name {
+        font-size: 1.6rem;
+    }
+    
+    .header__title {
+        font-size: 1rem;
+    }
+    
+    .header__location {
+        font-size: 0.9rem;
+    }
+    
+    .main {
+        padding: var(--spacing-md) 0;
+    }
+    
+    .section {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .section__title {
+        font-size: 1.4rem;
+    }
+    
+    .section__text {
+        text-align: left;
+    }
+    
+    .service__title,
+    .trust-item__title {
+        font-size: 1.1rem;
+    }
+    
+    .contact__label {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   ACCESIBILIDAD
+   ============================================ */
+
+/* Mejora del contraste y legibilidad */
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Focus visible para navegación por teclado */
+*:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
 }
