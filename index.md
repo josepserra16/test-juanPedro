@@ -3,7 +3,7 @@ layout: default
 title: Consultora de Recursos Humanos en Mallorca
 ---
 
-# Consultora de Recursos Humanos en Mallorca
+# Consultora de Recursos Humanos en Mallorcasdsadds
 
 Somos una consultora especializada en **gestión de personas**, formación y desarrollo del talento.  
 Acompañamos a empresas a mejorar sus equipos y resultados.
