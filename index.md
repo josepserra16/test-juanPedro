@@ -1,42 +1,47 @@
-# Consultora [Nombre]
+---
+layout: default
+title: Consultora de Recursos Humanos en Mallorca
+---
 
-![Logo](logo.png)
+# Consultora de Recursos Humanos en Mallorca
 
-## Sobre nosotros
-
-Somos una consultora especializada en **[tu servicio]**, con experiencia en **[sector]**.  
-Ayudamos a empresas a mejorar su **[objetivo principal]**.
+Somos una consultora especializada en **gestión de personas**, formación y desarrollo del talento.  
+Acompañamos a empresas a mejorar sus equipos y resultados.
 
 ---
 
-## Nuestros servicios
+## Qué hacemos
 
-### 1) [Servicio 1]
-Descripción breve del servicio 1.
+### Consultoría estratégica de RRHH
+Alineamos la gestión de personas con los objetivos de tu empresa.
 
-### 2) [Servicio 2]
-Descripción breve del servicio 2.
+### Formación y desarrollo
+Diseñamos programas formativos adaptados a cada organización.
 
-### 3) [Servicio 3]
-Descripción breve del servicio 3.
+### Team Building y convenciones
+Mejoramos la cohesión, comunicación y motivación de los equipos.
+
+### Coaching profesional
+Acompañamiento individual y de equipos para alcanzar objetivos reales.
 
 ---
 
-## Proyectos / Casos de éxito
+## Por qué elegirnos
 
-- **Cliente 1** – Resultado o descripción breve  
-- **Cliente 2** – Resultado o descripción breve  
-- **Cliente 3** – Resultado o descripción breve  
+- Experiencia en diferentes sectores  
+- Soluciones personalizadas  
+- Enfoque práctico y humano  
+- Resultados medibles  
 
 ---
 
 ## Contacto
 
-📍 Dirección: [Ciudad, País]  
-📧 Email: contacto@consultora.com  
-📞 Teléfono: +123 456 789
+📍 Mallorca, España  
+📧 contacto@tudominio.com  
+📞 +34 600 000 000
 
 ---
 
-![Imagen de consultoría](imagen1.png)
-![Otra imagen](imagen2.png)
+![Equipo de consultoría](equipo.jpg)
+![Sesión de trabajo](consultoria.jpg)
